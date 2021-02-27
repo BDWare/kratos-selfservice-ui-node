@@ -1,14 +1,14 @@
 <div class="content">
     {{> header}}
     <div class="container">
-        <h2 class="greeting">Welcome back, <span class="user-identifier">{{session.identity.traits.email}}</span>!</h2>
-        <h3>This example app is secure by default!</h3>
+        <h2 class="greeting">Welcome back, <span class="user-identifier">{{session.identity.traits.nickname}}</span>!</h2>
+        <h3>This is BDWare Team portal.</h3>
         <p>
             Hello, nice to have you! You signed up with this data:
         </p>
         <pre><code>{{jsonPretty session.identity.traits}}</code></pre>
         <p>
-            Requests to your application contain a ORY Kratos Session Cookie:
+            Requests to our applications contain a ORY Kratos Session Cookie:
         </p>
         <pre><code>{{headers}}</code></pre>
 

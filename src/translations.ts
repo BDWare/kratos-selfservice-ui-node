@@ -1,32 +1,36 @@
 import { FormField } from '@oryd/kratos-client'
 
 const translations = {
+  'traits.email': {
+    title: 'Email',
+    position: 1,
+  },
   password: {
     title: 'Password',
     position: 2,
   },
-  'traits.email': {
-    title: 'E-Mail',
-    position: 1,
-  },
   'traits.name.first': {
-    title: 'First Name',
-    position: 2,
+    title: 'First Name (中文)',
+    position: 3,
   },
   'traits.name.last': {
-    title: 'Last Name',
-    position: 3,
+    title: 'Last Name (中文)',
+    position: 4,
+  },
+  'traits.nickname': {
+    title: 'English name/nickname',
+    position: 5,
   },
   'traits.website': {
     title: 'Website',
-    position: 4,
+    position: 6,
   },
   identifier: {
-    title: 'E-Mail',
+    title: 'Email',
     position: 0,
   },
   to_verify: {
-    title: 'Your email address',
+    title: 'Your @internetapi.cn email address',
     position: 0,
   },
 }

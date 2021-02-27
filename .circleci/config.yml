@@ -46,11 +46,11 @@ jobs:
             ./.circleci/release_name.bash
             source $BASH_ENV
       - setup_remote_docker
-      - run: docker build -t oryd/kratos-selfservice-ui-node:latest .
-      - run: docker tag oryd/kratos-selfservice-ui-node:latest oryd/kratos-selfservice-ui-node:$DOCKER_SHORT_TAG
+      - run: docker build -t bdware/kratos-selfservice-ui-node:latest .
+      - run: docker tag bdware/kratos-selfservice-ui-node:latest bdware/kratos-selfservice-ui-node:$DOCKER_SHORT_TAG
       - run: docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-      - run: docker push oryd/kratos-selfservice-ui-node:latest
-      - run: docker push oryd/kratos-selfservice-ui-node:$DOCKER_SHORT_TAG
+      - run: docker push bdware/kratos-selfservice-ui-node:latest
+      - run: docker push bdware/kratos-selfservice-ui-node:$DOCKER_SHORT_TAG
 
 workflows:
   tbr:

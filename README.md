@@ -1,8 +1,8 @@
-# ORY Kratos ExpressJS Self-Service UI Reference
+# BDWare's Kratos ExpressJS Self-Service UI
 
-[![CircleCI](https://circleci.com/gh/ory/kratos-selfservice-ui-node.svg?style=badge)](https://circleci.com/gh/ory/kratos-selfservice-ui-node)
+[![CircleCI](https://circleci.com/gh/BDWare/kratos-selfservice-ui-node.svg?style=badge)](https://circleci.com/gh/BDWare/kratos-selfservice-ui-node)
 
-This is an exemplary Self Service UI for [ORY Kratos](https://github.com/ory/kratos) Self Service features:
+This is BDWare's Self Service UI for [ORY Kratos](https://github.com/ory/kratos) Self Service features:
 
 - Registration
 - Login
