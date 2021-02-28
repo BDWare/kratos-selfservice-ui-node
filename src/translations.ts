@@ -1,4 +1,4 @@
-import { FormField } from '@oryd/kratos-client'
+import { FormField } from '@ory/kratos-client'
 
 const translations = {
   'traits.email': {
@@ -9,21 +9,29 @@ const translations = {
     title: 'Password',
     position: 2,
   },
+  'traits.username': {
+    title: 'Username (Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.)',
+    position: 3,
+  },
+  'traits.phone_number': {
+    title: 'Phone Number',
+    position: 4,
+  },
   'traits.name.first': {
     title: 'First Name (中文)',
-    position: 3,
+    position: 5,
   },
   'traits.name.last': {
     title: 'Last Name (中文)',
-    position: 4,
+    position: 6,
   },
   'traits.nickname': {
     title: 'English name/nickname',
-    position: 5,
+    position: 7,
   },
   'traits.website': {
     title: 'Website',
-    position: 6,
+    position: 8,
   },
   identifier: {
     title: 'Email',

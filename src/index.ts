@@ -12,7 +12,7 @@ import * as stubs from './stub/payloads'
 
 import request from 'request'
 import { hydraLogin, hydraGetConsent, hydraPostConsent } from './routes/hydra'
-import { Configuration, PublicApi } from '@oryd/kratos-client'
+import { Configuration, PublicApi } from '@ory/kratos-client'
 
 import settingsHandler from './routes/settings'
 import verifyHandler from './routes/verification'

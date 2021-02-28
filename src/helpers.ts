@@ -8,7 +8,7 @@ import {
   RegistrationFlow,
   SettingsFlow,
   VerificationFlow,
-} from '@oryd/kratos-client'
+} from '@ory/kratos-client'
 import { getPosition } from './translations'
 
 export const isString = (x: any): x is string => typeof x === 'string'

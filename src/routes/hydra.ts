@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 import config, { SECURITY_MODE_STANDALONE } from '../config'
-import { Configuration, PublicApi, Session } from '@oryd/kratos-client'
+import { Configuration, PublicApi, Session } from '@ory/kratos-client'
 import {
   AdminApi as HydraAdminApi,
   Configuration as HydraConfiguration,
