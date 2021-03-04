@@ -200,11 +200,25 @@ const createHydraSession = (
   requestedScope: string[] = [],
   context: Session
 ) => {
+  const hasEmail = requestedScope.indexOf('email') >= 0
+  const hasProfile = requestedScope.indexOf('profile') >= 0
   const verifiableAddresses = context.identity.verifiable_addresses || []
-  if (
-    requestedScope.indexOf('email') === -1 ||
-    verifiableAddresses.length === 0
-  ) {
+  let id_token = {} as any
+
+  if (hasProfile) {
+    id_token = {
+      ...context.identity.traits,
+      email: undefined,
+    }
+  }
+  if ((hasEmail || hasProfile) && verifiableAddresses.length > 0) {
+    id_token = {
+      ...id_token,
+      email: verifiableAddresses[0].value,
+    }
+  }
+
+  if (!id_token.email) {
     return {}
   }
 
@@ -215,9 +229,9 @@ const createHydraSession = (
 
     // This data will be available in the ID token.
     // Most services need email-addresses, so let's include that.
-    id_token: {
+    id_token /*: {
       email: verifiableAddresses[0].value as Object, // FIXME Small typescript workaround caused by a bug in Go-swagger
-    },
+    }*/,
   }
 }
 
