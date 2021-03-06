@@ -2,7 +2,7 @@ import { FormField } from '@ory/kratos-client'
 
 const translations = {
   'traits.email': {
-    title: 'Email',
+    title: 'Email (@internetapi.cn)',
     position: 1,
   },
   password: {
@@ -10,7 +10,7 @@ const translations = {
     position: 2,
   },
   'traits.username': {
-    title: 'Username (Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.)',
+    title: 'Username (May only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.)',
     position: 3,
   },
   'traits.phone_number': {
