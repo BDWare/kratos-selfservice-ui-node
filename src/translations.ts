@@ -13,25 +13,21 @@ const translations = {
     title: 'Username (May only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.)',
     position: 3,
   },
-  'traits.phone_number': {
-    title: 'Phone Number',
+  'traits.name': {
+    title: 'Name (中文姓名)',
     position: 4,
-  },
-  'traits.name.first': {
-    title: 'First Name (中文)',
-    position: 5,
-  },
-  'traits.name.last': {
-    title: 'Last Name (中文)',
-    position: 6,
   },
   'traits.nickname': {
     title: 'English name/nickname',
-    position: 7,
+    position: 5,
+  },
+  'traits.phone_number': {
+    title: 'Phone Number',
+    position: 6,
   },
   'traits.website': {
     title: 'Website',
-    position: 8,
+    position: 7,
   },
   identifier: {
     title: 'Email',
