@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 import cookieParser from 'cookie-parser'
 import express, { Request, NextFunction, Response } from 'express'
 import handlebars from 'express-handlebars'
