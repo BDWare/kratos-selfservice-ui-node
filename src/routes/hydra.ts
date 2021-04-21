@@ -205,20 +205,14 @@ const createHydraSession = (
 ) => {
   const hasEmail = requestedScope.indexOf('email') >= 0
   const hasProfile = requestedScope.indexOf('profile') >= 0
-  const verifiableAddresses = context.identity.verifiable_addresses || []
-  let id_token = {} as any
-
-  if (hasProfile) {
-    id_token = {
-      ...context.identity.traits,
-      email: undefined,
-    }
-  }
-  if ((hasEmail || hasProfile) && verifiableAddresses.length > 0) {
-    id_token = {
-      ...id_token,
-      email: verifiableAddresses[0].value,
-    }
+  const hasGroups = requestedScope.indexOf('groups') >= 0
+  const identity = context.identity
+  const verifiableAddresses = identity.verifiable_addresses || []
+  const id_token = {
+    ...(hasProfile ? identity.traits : {}),
+    email: (hasEmail || hasProfile) && verifiableAddresses.length ?
+      verifiableAddresses[0].value : undefined,
+    memberOf: hasGroups ? (identity.traits as any).memberOf : undefined,
   }
 
   if (!id_token.email) {
